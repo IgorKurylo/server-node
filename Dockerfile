@@ -1,7 +1,15 @@
 FROM node:latest
-WORKDIR /usr/server_node
-COPY package.json /usr/server_node
+
+RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app
+
 RUN npm install
-COPY . .
-EXPOSE 8081
+
+COPY . /usr/src/app
+
+EXPOSE 3000
+
 CMD [ "node", "server.js" ]
