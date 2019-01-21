@@ -1,7 +1,7 @@
 {
   "name": "server_node",
   "version": "1.0.0",
-  "description": "Node Js Server",
+  "description": "node server",
   "main": "server.js",
   "scripts": {
     "test": "node server.js",
