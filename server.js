@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.listen(PORT, function(){
   console.log(`Connected...  Run On Port:${PORT}`);
 });
+app.listen("/",(res,req)=>{
+		
+	return res.send("Running");
+});
 
 
 
