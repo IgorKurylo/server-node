@@ -12,7 +12,5 @@ RUN npm install --quiet
 
 COPY . .
 
-EXPOSE 8082
-
 
 
