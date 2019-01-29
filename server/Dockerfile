@@ -14,6 +14,6 @@ COPY . .
 
 EXPOSE 8082
 
-CMD /wait  mysql-db:3306 -- sequelize db:create && sequelize db:migrate && node server.js
+CMD /wait node server.js
 
 
