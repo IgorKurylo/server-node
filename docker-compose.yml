@@ -15,9 +15,7 @@ services:
   #   volumes:
   #     - db_data:/var/lib/mysql
   app:
-    build:
-      context: server
-      dockerfile: Dockerfile
+    build: ./server
     command: npm run dev
     volumes:
       - .:/usr/app/
