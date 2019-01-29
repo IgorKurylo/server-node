@@ -23,6 +23,6 @@ services:
     expose:
       - "8082"
     volumes:
-      - - ${PWD}/app:/servernode
+      - - "${PWD}/app:/servernode"
 
 
