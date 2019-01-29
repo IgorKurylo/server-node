@@ -8,8 +8,4 @@ RUN npm install
 
 COPY . /home/nodeapp
 
-CMD node server.js
-
-EXPOSE 8082
-
 
