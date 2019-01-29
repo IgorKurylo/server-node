@@ -4,20 +4,15 @@ FROM node:8-alpine
 
 # RUN chmod +x /wait
 
-RUN mkdir -p /opt/app
+WORKDIR /usr/app
 
-WORKDIR /opt
+COPY  package*.json .
 
-COPY  package*.json /opt/app
+RUN npm install --quiet
 
-RUN npm install && npm cache clean --force
-
-WORKDIR /opt/app
-
-COPY . /opt/app
+COPY . .
 
 EXPOSE 8082
 
-CMD ["node" "server.js"]
 
 

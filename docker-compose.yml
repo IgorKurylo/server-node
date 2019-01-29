@@ -18,6 +18,11 @@ services:
     build:
       context: server
       dockerfile: Dockerfile
+    command: npm run dev
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+   
     ports:
       - "8082:8082"
 
