@@ -16,7 +16,7 @@ services:
   #     - db_data:/var/lib/mysql
   app:
     build: ./server
-    command: npm run dev
+    command: npm run devdock
     volumes:
       - ./server:/home/nodeapp
     ports:
