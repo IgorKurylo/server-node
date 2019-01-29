@@ -6,9 +6,9 @@ FROM node:8-alpine
 
 WORKDIR /opt/app
 
-COPY package*.json ./
+COPY package.json package-lock.json*  ./
 
-RUN npm install
+RUN npm install && npm cache clean --force
 
 COPY . .
 
