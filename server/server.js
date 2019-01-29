@@ -15,20 +15,20 @@ app.use((req,res)=>{
 
 const http = require('http').Server(app)
 
-// const dbConfig = require("./config/config.json").development;
-// const sequelize=new Sequelize(dbConfig.databse,dbConfig.username,dbConfig.password,{
-//   host: dbConfig.host,
-//   dialect: dbConfig.dialect,
-//   operatorsAliases: false,
-//   pool: {
-//     max: 5,
-//     min: 0,
-//     acquire: 30000,
-//     idle: 10000,
-//   },
-// });
-// sequelize.authenticate().then(()=>{console.log("Connection establish successfully.")})
-// .catch((error)=>{console.log(error,"Connection faild.")});
+const dbConfig = require("./config/config.json").development;
+const sequelize=new Sequelize(dbConfig.databse,dbConfig.username,dbConfig.password,{
+  host: dbConfig.host,
+  dialect: dbConfig.dialect,
+  operatorsAliases: false,
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
+  },
+});
+sequelize.authenticate().then(()=>{console.log("Connection establish successfully.")})
+.catch((error)=>{console.log(error,"Connection faild.")});
 http.listen(port,()=>{
   console.log("Listening on port " + port)
   app.emit('APP_START')
