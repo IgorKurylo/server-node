@@ -16,7 +16,7 @@ services:
   #     - db_data:/var/lib/mysql
   app:
     build:
-      context: ./server
+      context: server
       dockerfile: Dockerfile
     ports:
       - "8082:8082"
