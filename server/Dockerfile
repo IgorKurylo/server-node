@@ -1,16 +1,15 @@
-FROM node:10
-
-# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
-
-# RUN chmod +x /wait
+FROM node:8.15.0-alpine
 
 WORKDIR /home/nodeapp
 
-COPY  package*.json ./
+COPY  package*.json /home/nodeapp
 
 RUN npm install
 
-COPY . .
+COPY . /home/nodeapp
 
+CMD node server.js
+
+EXPOSE 8082
 
 
