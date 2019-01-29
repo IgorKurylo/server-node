@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const Sequelize = require("sequelize");
 const logger = require('morgan')
-const app=express();
+const app = express();
 const port = process.env.PORT || 8082
 
 app.use(logger('combined'))
