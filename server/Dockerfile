@@ -1,11 +1,11 @@
-FROM node:8.15.0-alpine
-
-WORKDIR /usr/app
+FROM node:10
 
 COPY  package.json ./
 
-RUN npm install --quiet
+RUN npm install 
 
 COPY . .
+
+CMD ["node","server.js"]
 
 
