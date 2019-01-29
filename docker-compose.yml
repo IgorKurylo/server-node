@@ -18,7 +18,8 @@ services:
     build: ./server
     command: npm run dev
     volumes:
-      - .:/home/nodeapp
+      - .:/usr/app/
+      - /usr/app/node_modules
     ports:
       - "8082:8082"
 

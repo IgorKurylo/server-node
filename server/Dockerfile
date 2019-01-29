@@ -1,11 +1,11 @@
 FROM node:8.15.0-alpine
 
-WORKDIR /home/nodeapp
+WORKDIR /usr/app
 
-COPY  package.json /home/nodeapp
+COPY  package.json ./
 
-RUN npm install
+RUN npm install --quiet
 
-COPY . /home/nodeapp
+COPY . .
 
 
