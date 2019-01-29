@@ -12,8 +12,9 @@ services:
     volumes:
       - ${PWD}/migrations/sequelize:/sql
   app:
-    context: ./server
-    dockerfile: Dockerfile
+    build:
+      context: ./server
+      dockerfile: Dockerfile
     depends_on:
       - mysql-db
     volumes:
