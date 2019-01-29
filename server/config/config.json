@@ -3,21 +3,21 @@
     "username": "super",
     "password": "man",
     "database": "database_development",
-    "host": "127.0.0.1",
+    "host": "mysql-db",
     "dialect": "mysql"
   },
   "test": {
     "username": "super",
     "password": "man",
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "mysql-db",
     "dialect": "mysql"
   },
   "production": {
     "username": "super",
     "password": "man",
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "mysql-db",
     "dialect": "mysql"
   }
 }
