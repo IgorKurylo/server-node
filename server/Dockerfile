@@ -4,11 +4,17 @@ FROM node:8-alpine
 
 # RUN chmod +x /wait
 
-COPY package.json package-lock.json*  ./
+RUN mkdir -p /opt/app
+
+WORKDIR /opt
+
+COPY package.json package-lock.json* ./
 
 RUN npm install && npm cache clean --force
 
-COPY . .
+WORKDIR /opt/app
+
+COPY . /opt/app
 
 EXPOSE 8082
 
