@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: super
       MYSQL_DATABASE: database_development
       MYSQL_USER: man
-      MYSQL_PASSWORD: TheMoovex2017  
+      MYSQL_PASSWORD: super
     ports: 
       - "3306:3306"
     expose:
@@ -23,7 +23,7 @@ services:
     ports:
       - "8082:8082"
     expose:
-      - "5000"
+      - "8082"
     volumes:
       - ./server:/opt/app:delegated
       - ./server/package.json:/opt/package.json
