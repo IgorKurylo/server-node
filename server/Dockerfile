@@ -4,8 +4,6 @@ FROM node:8-alpine
 
 # RUN chmod +x /wait
 
-WORKDIR /opt/app
-
 COPY package.json package-lock.json*  ./
 
 RUN npm install && npm cache clean --force
