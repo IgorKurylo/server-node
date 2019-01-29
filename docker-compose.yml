@@ -5,9 +5,9 @@ services:
     image: mysql
     environment:
        MYSQL_ROOT_PASSWORD: root
-       MYSQL_USER: dbuser
-       MYSQL_PASSWORD: dbuserpwd
-       MYSQL_DATABASE: dev_db
+       MYSQL_USER: super
+       MYSQL_PASSWORD: man
+       MYSQL_DATABASE: database_development
     restart: always
     ports: 
       - 3306:3306
