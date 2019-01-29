@@ -16,6 +16,7 @@ services:
   #     - db_data:/var/lib/mysql
   app:
     build: ./server
+    command: npm start
     volumes:
       - ./server:/usr/app/
     ports:
