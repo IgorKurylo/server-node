@@ -8,7 +8,7 @@ RUN mkdir -p /opt/app
 
 WORKDIR /opt
 
-COPY package.json package-lock.json* ./
+COPY ./server/package*.json  ./
 
 RUN npm install && npm cache clean --force
 
