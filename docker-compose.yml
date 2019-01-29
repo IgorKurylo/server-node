@@ -29,7 +29,8 @@ services:
       - ./server/package.json:/opt/package.json
       - ./server/package-lock.json:/opt/package-lock.json
       - ./notused:/opt/app/node_modules
-  volumes:
-      db_data:
-      notused:
+  
+volumes:
+    db_data:
+    notused:
 
