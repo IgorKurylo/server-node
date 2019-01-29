@@ -1,19 +1,19 @@
 version: '3'
 services:
-  mysql-db: 
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: super
-      MYSQL_DATABASE: database_development
-      MYSQL_USER: man
-      MYSQL_PASSWORD: super
-    ports: 
-      - "3306:3306"
-    expose:
-      - "3306"
-    volumes:
-      - db_data:/var/lib/mysql
+  # mysql-db: 
+  #   image: mysql:5.7
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: super
+  #     MYSQL_DATABASE: database_development
+  #     MYSQL_USER: man
+  #     MYSQL_PASSWORD: super
+  #   ports: 
+  #     - "3306:3306"
+  #   expose:
+  #     - "3306"
+  #   volumes:
+  #     - db_data:/var/lib/mysql
   app:
     build:
       context: ./server
@@ -25,12 +25,6 @@ services:
     expose:
       - "8082"
     volumes:
-      - ./server:/opt/app:delegated
-      - ./server/package.json:/opt/package.json
-      - ./server/package-lock.json:/opt/package-lock.json
-      - ./notused:/opt/app/node_modules
-  
-volumes:
-    db_data:
-    notused:
+      - app:/server/
+
 
