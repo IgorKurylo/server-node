@@ -18,8 +18,6 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    depends_on:
-      - mysql-db
     ports:
       - "8082:8082"
     expose:
