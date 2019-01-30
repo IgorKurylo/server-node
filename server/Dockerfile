@@ -1,17 +1,21 @@
 ###############################################################################
 FROM node:9-alpine
 
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+
+
 ENV NODE_ENV=production
+
 
 WORKDIR /home/node/app
 
 # Install deps for production only
 COPY ./package* ./
 RUN npm install && \
-    npm cache clean --force
+    npm cache clean --force \ echo "start node js"
 # Copy builded source from the upper builder stage
 COPY . .
 # Expose ports (for orchestrators and dynamic reverse proxies)
 EXPOSE 8082
 # Start the app
-CMD npm start
+CMD /wait &&  npm start
