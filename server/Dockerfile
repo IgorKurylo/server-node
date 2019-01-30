@@ -9,8 +9,6 @@ RUN npm install
 
 COPY . .
 
-RUN chmod +x ./wait-for-it.sh
-
 CMD /wait &&  npm start
 
 
