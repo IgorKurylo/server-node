@@ -4,10 +4,7 @@ services:
   mysql-db: 
     image: mysql
     environment:
-       MYSQL_ROOT_PASSWORD: root
-       MYSQL_USER: super
-       MYSQL_PASSWORD: man
-       MYSQL_DATABASE: database_development
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     restart: always
     ports: 
       - 3306:3306
