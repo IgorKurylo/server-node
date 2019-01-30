@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "root",
-    "password": "123456",
+    "username": "dbuser",
+    "password": "dbuserpwd",
     "database": "database",
     "host": "mysql-db",
     "dialect": "mysql"

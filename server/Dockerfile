@@ -20,4 +20,4 @@ COPY . .
 # Expose ports (for orchestrators and dynamic reverse proxies)
 EXPOSE 8082
 # Start the app
-CMD /wait &&  npm start
+CMD /wait && mysql-db:3306 -- sequelize db:migrate &&  npm start
