@@ -14,7 +14,7 @@ WORKDIR /home/node/app
 # Install deps for production only
 COPY ./package* ./
 RUN npm install && \
-    npm cache clean --force \ echo "start node js"
+    npm cache clean --force
 # Copy builded source from the upper builder stage
 COPY . .
 # Expose ports (for orchestrators and dynamic reverse proxies)
