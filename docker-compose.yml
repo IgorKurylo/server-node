@@ -2,16 +2,16 @@ version: '3'
 
 services:
   reverse-proxy:
-      image: traefik # The official Traefik docker image
-      command: --api --docker.exposedbydefault=false # Enables the web UI and tells Træfik to listen to docker, without exposing by default
-      ports:
-        - "80:80"     # The HTTP port
-        - "8080:8080" # The Web UI (enabled by --api)
-      volumes:
-        - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
+    image: traefik # The official Traefik docker image
+    command: --api --docker.exposedbydefault=false # Enables the web UI and tells Træfik to listen to docker, without exposing by default
+    ports:
+      - "80:80"     # The HTTP port
+      - "8080:8080" # The Web UI (enabled by --api)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
   mysql-db: 
     image: mysql
-   environment:
+    environment:
       - MYSQL_ROOT_PASSWORD
       - MYSQL_DATABASE
     restart: always
