@@ -17,7 +17,6 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-      command: ['./server/wait-for-it.sh','mysql-db:3306','npm start']
     depends_on:
       - mysql-db
     volumes:
