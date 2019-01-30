@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel"
+
   },
   "author": "Igor",
   "license": "ISC",
@@ -21,11 +24,7 @@
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
-    "await-to-js": "^2.1.1",
-    "bluebird": "^3.5.3",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "parse-error": "^0.2.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }
