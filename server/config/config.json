@@ -2,7 +2,7 @@
   "development": {
     "username": "dbuser",
     "password": "dbuserpwd",
-    "database": "database_dev",
+    "database": "database",
     "host": "mysql-db",
     "dialect": "mysql",
     "seederStorage": "json",
