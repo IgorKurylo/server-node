@@ -13,7 +13,7 @@ WORKDIR /home/node/app
 
 RUN apk update
 
-RUN apk add  sequelize-cli mysql2
+RUN apk add  sequelize-cli
 
 RUN sequelize db:migrate
 
