@@ -4,26 +4,20 @@
     "password": "dbuserpwd",
     "database": "databse",
     "host": "mysql-db",
-    "dialect": "mysql",
-    "seederStorage": "json",
-    "seederStoragePath": "sequelizeData.json"
+    "dialect": "mysql"
   },
   "test": {
     "username": "dbuser",
     "password": "dbuserpwd",
     "database": "database_test",
     "host": "mysql-db",
-    "dialect": "mysql",
-    "seederStorage": "json",
-    "seederStoragePath": "sequelizeData.json"
+    "dialect": "mysql"
   },
   "production": {
     "username": "dbuser",
     "password": "dbuserpwd",
     "database": "database_production",
     "host": "mysql-db",
-    "dialect": "mysql",
-    "seederStorage": "json",
-    "seederStoragePath": "sequelizeData.json"
+    "dialect": "mysql"
   }
 }
