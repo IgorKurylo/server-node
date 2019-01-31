@@ -18,7 +18,7 @@ app.use((req,res,next)=>{
 })
 
 const http = require('http').Server(app)
-const dbConfig;
+const dbConfig={};
 if(process.env.NODE_ENV=='development'){
   console.log("Dev Enviroment")
    dbConfig = require("./config/config.json").development;
