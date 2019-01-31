@@ -16,6 +16,10 @@ RUN npm install && \
     npm cache clean --force
 # Copy builded source from the upper builder stage
 COPY . .
+## Set environment to "development" by default
+
+ENV NODE_ENV development
+
 # Expose ports (for orchestrators and dynamic reverse proxies)
 EXPOSE 8082
 # Start the app
