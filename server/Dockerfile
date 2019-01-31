@@ -11,6 +11,12 @@ ENV NODE_ENV=production
 
 WORKDIR /home/node/app
 
+RUN apk update
+
+RUN apk install  sequelize-cli mysql2
+
+RUN sequelize db:migrate
+
 # Install deps for production only
 COPY ./package* ./
 RUN npm install && \
@@ -20,4 +26,4 @@ COPY . .
 # Expose ports (for orchestrators and dynamic reverse proxies)
 EXPOSE 8082
 # Start the app
-CMD /wait && mysql-db:3306 -- sequelize db:migrate &&  npm start
+CMD /wait &&  npm start
