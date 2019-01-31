@@ -14,11 +14,9 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use((req,res,next)=>{
   res.status(404)
   next(new Error("Not Found"))
-  
-})
-
+});
 const http = require('http').Server(app)
-const dbConfig={};
+var dbConfig = {};
 if(process.env.NODE_ENV=='development'){
   console.log("Dev Enviroment")
    dbConfig = require("./config/config.json").development;
