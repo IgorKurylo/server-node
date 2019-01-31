@@ -28,5 +28,5 @@ COPY ./docker-entrypoint.sh /
 
 RUN chmod +x /docker-entrypoint.sh
 
-CMD /wait && /docker-entrypoint.sh  npm start
+CMD /wait && /docker-entrypoint.sh &&  npm start
 
