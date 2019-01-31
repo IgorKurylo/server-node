@@ -11,13 +11,6 @@ ENV NODE_ENV=production
 
 WORKDIR /home/node/app
 
-RUN apk update
-
-RUN apk add  sequelize-cli
-
-RUN sequelize db:migrate
-
-# Install deps for production only
 COPY ./package* ./
 RUN npm install && \
     npm cache clean --force
@@ -26,4 +19,8 @@ COPY . .
 # Expose ports (for orchestrators and dynamic reverse proxies)
 EXPOSE 8082
 # Start the app
-CMD /wait &&  npm start
+
+COPY ./docker-entrypoint.sh /
+
+CMD /wait && /docker-entrypoint.sh  npm start
+
